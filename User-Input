@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class student {
+public:
+
+    student (const string & name, const string & IDnum) : name_(name), IDnum_(IDnum){}
+    
+    string getName() const { return name_; }
+    string getIDnum() const { return IDnum_; }
+    
+private:
+    string name_;
+    string IDnum_;
+};
+
+int main()
+{
+    
+    string name, IDnum;
+    
+    cout << "Enter student name: ";
+    getline(cin, name);
+    cout << "Enter student's ID number: ";
+    getline(cin, IDnum);
+    
+    student student(name, IDnum);
+    
+    cout << "Your name: " << student.getName() << "\nID number: " << student.getIDnum() << endl;
+    
+    return 0;
+}
